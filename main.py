@@ -229,6 +229,9 @@ def progress_hook(d):
         d_loader.configure(amountused=100)
 
 def download_audio(url):
+
+    d_loader.configure(amountused=0)
+
     # Determine the destination directory.
     dire = os.getcwd() if current_dir else tempfile.gettempdir()
     
